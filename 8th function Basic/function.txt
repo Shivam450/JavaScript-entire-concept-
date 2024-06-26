@@ -1,0 +1,103 @@
+Lesson - Functions in JavaScript - Basics
+            What is a Function ?
+            Why we need Function ?
+            Syntax / Structure / Declaration of a Function 
+                function abc()//parameters - It accepts the data form outside the function
+                {
+                    //statements.
+                }
+
+            abc()
+            ['abc']()
+
+            Terminologies Utilised in a Function
+                parameter 
+                    => The Variable which is defined in the function and through which you can pass
+                    the data to the function.
+                    a. User Passed Parameter 
+                        Whenever the user passes the data.
+                    b. Pre defined Parameter 
+                        Whenever you set the data.
+                argument 
+                    => From Outside the Function, if we pass any data through a variable to the function
+                    then such passed variables are called as argument.  
+                return keyword 
+                    => It return the flow to the called level or where ever it got triggered.
+                Function scope
+                    => the scope in which the function's definition is present.
+                function keyword
+                    => function which helps hte JS Compiler to understand that this is a function.
+            Trigger / Call a Function
+
+            var x = 100
+            var y = 100
+            function abc(a,b)   //parameters - It accepts the data form outside the function
+                {
+                    return a + b
+                }
+
+            var m = abc(x,y)   // Line of Trigger / Calling Point
+            // x and y are called arguments.
+            // ['abc']()
+            console.log(m)
+
+            var x = 100
+            var y = 100
+            function abc(a = 200,b = 200)
+                {
+                    console.log(a + b)
+                }
+            abc()
+
+            Helper Function 
+            => 
+            //Compund Wall for a 30*40 Dimension Sites => 30+40+30+40 => 140 as the length
+function mycompoundlength(a,b){ //30 40
+    return 2*(a+b)        //140
+}
+
+//Per sqft I am charging 100 rupees.
+var moneyspentoncompound = mycompoundlength(30,40) * 100
+console.log(moneyspentoncompound)
+
+
+            Where all it could be used and how does it helps us ?
+            
+                a. Code Structure becomes clean and crisp = Modularize Coding Approach.
+                b. Saving Resources like number of lines = Reusable Piece of Code.
+                c. Encapsulation Concept = Hiding the data from the user's view.
+                d. While Debugging = Handling of Errors. 
+function mycompoundlength(a,b){ //30 40
+    let z = a + b
+    return 2*z        //140
+}
+
+//Per sqft I am charging 100 rupees.
+var moneyspentoncompound = mycompoundlength(30,40) * 100
+console.log(moneyspentoncompound)
+console.log(z)
+
+Assignment on Array Question no 3
+
+// Input:
+// [1, 2, 3, 4, 5]  //  [5,1,2,3,4] // [4,5,1,2,3]
+// 2
+// Output:
+// [4, 5, 1, 2, 3]
+//Note: The value of k can be greater than the length of the array, so multiple rotations might be needed.
+var a = [1, 2, 3, 4, 5]
+var b = 12
+function rotateArray(myarray,k){    //k is based on positions
+    if(k > myarray.length)          // 7 > 5
+    {
+        k %= myarray.length         // k %= myarray.length  |  k = k%myarray.length | k = 7%5 | k = 2
+    }
+    for(let i = myarray.length - 1; i> k; i--)  // i = 4, 4 > 2; 4--    // 3-- 
+    {
+        // i = 4                    // i = 3        // i = 2 ~ 2>2
+        var a = myarray.pop()
+        myarray.unshift(a) 
+    }  
+    console.log(myarray)
+}
+rotateArray(a,b)

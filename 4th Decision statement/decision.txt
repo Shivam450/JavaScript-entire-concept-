@@ -1,0 +1,228 @@
+29 Jan 2024
+Lesson 4 = Javascript Decision Statements
+
+        if Statement
+        => Is used to check a single condition / Option.
+            If the condition is true then take it, If it is false then just skip it.
+
+            if(condition)
+            {
+                Statements  // If condition is true this statement will execute if not it will be skipped.
+            }
+
+if(3>2) // 3 > 2    // true
+{
+    console.log("I just got executed from line Number 3")
+}
+if(2>3) // 2 > 3    // false
+{
+    console.log("I just got executed from line Number 7")
+}
+
+        if else Statement
+         => Is used to check a single condition / Option.
+            If the condition is true then take it, If it is false then take the other one.
+
+            if(condition)
+            {
+                Statements  // If condition is true this statement will execute.
+            }
+            else
+            {
+                Statements  // If condition is false this statement will execute.
+            }
+
+if(10==9)
+{
+    console.log("Hey I am from Number 3")   //cond true
+}
+else
+{
+    console.log("Hey I am from Number 7")   //cond false
+}
+
+        if else ladder Statement / Nested If else Statement
+        => we can have multiple conditions.
+        => If the first condition is true then all the other conditions are skipped.
+        => The else statement at the end will be executed only if all the conditions are false
+
+        if(10==9)
+{
+    console.log("Hey I am from Number 3")   //cond true
+}
+else if(10!=9)
+{
+    console.log("Hey I am from Number 7")   //cond false
+}
+else
+{
+    console.log("Hey I am from Number 16")   //cond false
+}
+
+var a = 4
+if(a <= 0)
+{
+    console.log("The given number out of scope")
+}
+else if(a%2 != 0)
+{
+    console.log("The given number is odd")
+}
+else
+{
+    console.log("The given number is even")
+}
+
+        Switch Statement 
+
+        => scope is case !!
+        => Based on the condition/data/value, you will select a particular case(scope) for execution.
+        => The caondition/value/data could of any types 
+                Number
+                String
+                Boolean
+        Switch(n)
+        {
+            case 1: //Statements
+                    break
+            case 2: //Statements
+                    break
+            case 3: //Statements
+                    break
+            case 4: //Statements
+                    break
+            default: //statements
+        }
+
+        var a = "Nepal"
+
+switch(a)
+{
+    case 'India' : console.log("I am Case 1")
+               break
+    case 'Srilanka' : console.log("I am Case 2")
+               break
+    case 'Nepal' : console.log("I am Case 3")
+               break
+    case 'Pakistan' : console.log("I am Case 4") 
+               break
+    default: console.log("Please enter the values from a to d")
+}
+
+        Control Statements
+        => These statements/ keywords are used to control the flow of the Program's Execution
+            break   => It will stop the flow of execution and throws the flow outside of switch statement.
+            continue
+            // pass
+            // goto 
+            // label 
+            // yield = Generator Functions
+
+
+        Nested Statements
+            Nested If
+            => If statement within a if Statement and so on.
+            => The Nested If acts like & Operator
+            => The NEsted if also behaves like a Filter
+
+            if()
+            {
+                if()
+                {
+
+                }
+            }
+
+            or
+
+              if()
+            {
+                if()
+                {
+                    if()
+                    {
+
+                    }
+                }
+            }
+
+            => The Shorthand Property is 
+
+            if(cond1 && cond 2)
+            {
+
+            }
+
+//I want to find out whether the given number is even and also it is greater than 50 and less then 100
+var a = 63
+if(a>50)
+{
+    if(a<100)
+    {
+        if(a%2==0)
+        {
+            console.log("The given number is greater than 50 & less than 100 and also It is a even number")
+        }
+        else
+        {
+            console.log("Hello")
+        }
+    } 
+}
+
+if(a>50 && a%2==0 && a<100)
+{
+    console.log("The given number is greater than 50 and also It is a even number")
+}
+else
+{
+    console.log("Hello")
+}
+
+
+// 1 & 1 => 1
+// 1 & 0 => 0
+// 0 & 0 => 0
+// 0 & 1 => 0
+
+            Nested Switch
+            => Switch within a Switch
+
+            switch(a)
+{
+    case 'withdraw' : 
+        //var b = what you press on the screen that value will be saved here (event handler or prompt)
+        switch(b)
+        {
+            case '1000':
+            case '2000':
+            case '5000':
+            case 'custom':  
+                var a = prompt("Enter the value you want to withdraw")
+                confirm("The entered value is " + a)
+            default: console.log("Thankyoiu")
+        }
+    case 'deposit' :
+    case 'pin Change':
+    default: console.log("Bye")
+}
+
+Multiple Cases can have Same Statements = By manupilating the break keyword.
+
+var a = 'chennai'  //city name is provided
+switch(a)
+{
+    case 'bangalore': 
+    case 'mumbai':
+                  console.log("I am Present in both Bangalore and Mumbai")
+                  break
+    case 'chennai':
+    case 'delhi':
+                console.log("I am Present in both Chennai and Delhi")
+                break
+    case 'patna': console.log("I am Present in Patna")
+                  break
+    case 'noida': console.log("I am Present in Noida")
+                  break
+    default: console.log("The Entered City does not Exist.")
+}

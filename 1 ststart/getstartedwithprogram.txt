@@ -1,0 +1,176 @@
+22/01/2024
+Lesson - Getting Started with Programming
+        What is MERN Full Stack Web Development ?
+        => It is combination of both Front End and Back End 
+            Front End
+            => this is where the user's interaction takes place.
+            Multiple Names for Front End
+                User Interface
+                Client (Technical)
+                View
+                Browser 
+
+            HTML, CSS, JS, Templates(Libraries) and Front End Frameworks(BootStrap/Tailwind CSS)
+
+            Back End
+            => This is where the User's Interaction is handled.
+             Multiple Names for Back End
+                Server (Technical)
+                Logical
+                Controller 
+
+            Node.js, Express.js
+
+                Database
+                => It is used to store the data.
+                Multiple Names for Database
+                    Model
+                    Data Storage
+
+            MariaDB, MongoDB
+
+        Why MERN Full Stack ?
+        => You can built a product from zero to 100.
+        => Just 1 Programming language.
+        => Community - Ready to Help.
+        => Huge collections of Templates/Libraries => npmjs.com (14 Lakhs +)
+        => Front End, Back End, Database.
+        => React = SPA 
+
+        Web and its Building Blocks
+            Content
+            Client and Server
+            Protocol
+                => rules or guidelines or procedures etc.. 
+                => based on these rules data transfer will happen.
+            Identification
+                => It is used to access the data on the Internet.
+                => URL's
+                Uniform Resource Locator 
+
+        What is Programming ?
+        => It is a language used to communicate with Machines
+        Why Programming ?
+        => It is used to build softwares/Products which can reduce the task or help humans
+            Eg: Airmeet
+        Types / Categories of Programming
+            Procedure Oriented P L 
+                C, Fortran, pascal, etc... 
+            Object Oriented P L 
+                Python, Java, C++. etc... 
+            Scripting L 
+                PHP, Perl, Python, JS, etc.. 
+            Mark Up L 
+                HTML, XML, etc... 
+            Pure Object Oriented P L 
+                Dot Net, etc... 
+            Functional L 
+                haskell, etc... 
+            etc....
+
+JS
+=> 1996/97 it was introduced.
+=> Scripting Language (Assumption - Lets consider there was 10 features)
+=> JS 2,3 and 4 => Procedural Oriented Programming Language Behaviour (Assumption - Lets consider there 
+was 40 features )
+=> In 2009, JS Version 5 was introduced, Object Oriented Programming Langugae 
+=> 2015, JS Version 6 was introduced, More Object Oriented.
+
+Type Script
+=> It is a combination of your JS + JS V5 + JS V6 + Transpiler(Converts TS to JS).
+
+        Terminologies Used in a Programming Language
+            Syntax
+                => The way you express/write/organise the code.
+            Semantics
+                => It is a flow in which you organise/write/express the code.
+            Semicolon
+                => It is denoted by ; symbol
+                => It says the line is completed.
+            Statements
+                => A single line of code.
+            Comments
+                => These will not be executed by the JS Engine. It will be skipped during execution.
+                => We can add comments in JS using the symbol 
+                        //  Used to add a single line of comment  
+                        /* 
+                        dsbfudsfgg
+                        ewgfewghfr 
+                        */  Used to create Multi Line Comments 
+
+        How to set up Node Environment
+        Execute your First JS Program
+
+Background
+1960s => US Army = Bases all over the world = communicating = Connected these bases together =
+this led to a formation of a Network = Private in Nature.
+
+1980s => Educational Institutes, Banks, Insurance, Hedge Funds, etc... = Branches across the world =
+communicating = Connected these branches together = this led to a formation of a Network = Private in 
+Nature.
+
+1990s => Internet was introduced = Public Network = Anyone from anywhere can actually connect within
+this network and can communicate b/w each other.
+
+Communication was happening in the form of Documents in those days.
+
+They wanted to share these documents via the network !!!
+
+Create a Document ?
+    HTML 
+    => Hyper Text Markup Language
+    => It is used to create a document.
+
+How to make it reach its destination ?
+    Protocol
+        HTTP Protocol
+        => Hyper Text Transfer Protocol 
+
+CSS
+=> Cascading Style Sheets
+=> It is used to beautify your HTML Document.
+
+The Documents with HTML and CSS was very static. There was no interaction at all. Now they wanted
+to add some interaction to it or make the document make dynamic in nature.
+
+JS
+=> JavaScript
+=> Scripting Language used to convert your Static HTML Document into a dynamic one.
+
+Templates
+=> Reusable Code it can HTML, CSS and/or JS
+
+Collection of Templates being Created => Frameworks
+BootStrap is a framework.
+
+These all led to just 1 way communication only.
+
+To create a 2 way communication, servers(Back End) were created.
+Now these Servers can be created using any programming language. 
+    In our Case it is JS = MERN. MEAN. MEVN. MENN etc...
+                    python = Django. Flask. etc..
+                    PHP = LAMP, etc.. 
+                    Java = Java Stack, etc..
+                    Dot Net, rust, golang, etc... 
+
+Chrome Browser = Google                 = V8 Engine
+Internet Explorer / Edge = Microsoft    = chakra
+Safari Browser = Apple                  = JS Core
+FireFox Browser = Open Source COmmunicaty = Spider Monkey
+Opera Browser, etc...
+
+Late 2000's or Early 2010's
+=> Ryan 
+=> Google came up with a good news - V8 Engine Open SOurce !!
+=> V8 Engine + C + C++ => Node.js 
+=> Node.js = RUn time Enviornment which executes JS.
+
+Temapltes came, collection of templates 
+
+Express.js => It is a framework for Node.js
+
+Database => It is located on the server side. And it is used to store the data.
+    SQL Databases = Table format 
+        Eg: MariaDB, Sql, Msql, Mysql, Oracle Sql, etc..
+    NoSql Database = DOcument format, Key-value format, Column Based FOrmat, Graph Based FOrmat, etc..
+                        MongoDB         Redis            Apache Cassandra            Neo4j

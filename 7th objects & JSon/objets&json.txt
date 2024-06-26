@@ -1,0 +1,221 @@
+12/02/2024
+Lesson -  JavaScript Objects and JSON
+        What is JS Object ?
+        
+        JavaScript Objects
+            => Non primitive in Nature - It is user defined.
+            => Object Consists of a Collection of key value pairs
+            => The key is always a string(alphabet in nature) but it is not enclosed with ' or " quotes.
+            => The value can be both primitive and non primitive in nature.
+            => It is represent using a {} braces. Each key value pair is separated by a , symbol and
+            the key and value are separated using : symbol.
+            
+            var a = {name: "Raghu", age: 34, salary: 300}
+
+        Why we do need it ?
+
+        2 approaches that can be used to declare an Object
+            a. Literal 
+
+                var a = {name: "Raghu", age: 34, salary: 300}
+                console.log(a)
+
+            b. Constructor 
+
+            var b = new Object()
+            b.country = "India"
+            b.state = "Karnataka"
+            b.city = "Bangalore"
+            b.language = ["English", "Hindi", "Kannada", "Telugu", "Tamil"]
+            console.log(b)
+
+        2 approachs that can be used to access the value present inside the Object
+            (In JS, with the help of key name you can access the value.)
+            a. Dot Operator Notation
+                    First Approach
+                    a.name will give me the value Raghu.
+var a = {name: "Raghu", age: 34, salary: 300}
+console.log(a)
+console.log(a.name)
+console.log(a['salary'])
+
+            b. Square Braces Notation
+                    Second Approach
+                    a['name']   will give me the value Raghu.
+
+                    var b = new Object()
+b.country = "India"
+b.state = "Karnataka"
+b.city = "Bangalore"
+b.language = ["English", "Hindi", "Kannada", "Telugu", "Tamil"]
+console.log(b)
+console.log(b.country)
+console.log(b['city'])
+
+        Nested Objects
+        => Object inside another object and so on / object within object / object of Objects
+
+var b = {
+    name: {first_name: "Raghu", last_name: "Anand"}, 
+    age: {no_of_years: 33, no_of_months: 11, no_of_days: 27},
+    salary: {gross_income: 1000, net_income: 600},
+    address: {country: "India", state: "Karnataka", city:"Bangalore", area:"KBS", pincode:"000000", landmark: "MG Road" }
+}
+
+        How to access value from a Nested Objects
+var b = {
+    name: {first_name: "Raghu", last_name: "Anand"}, 
+    age: {no_of_years: 33, no_of_months: 11, no_of_days: 27},
+    salary: {gross_income: 1000, net_income: 600},
+    address: {country: "India", state: "Karnataka", city:"Bangalore", area:"KBS", pincode:"000000", landmark: "MG Road" }
+}
+
+// Access my net income
+console.log(b.salary.net_income)
+console.log(b['salary']['net_income'])
+
+        In built Methods that can be implemented for Objects.
+        a. keys 
+            => A collection of all the keys are given as output.
+        b. values 
+            => A collection of all the values are given as output.
+        c. entries 
+            => A collection of all the key value Pairs are given as output.
+            => Each Key value Pair is treated as a item.
+            => the key and the value are separately treated as items.
+            => The out put is Multi Dimensional Array 
+        d. freeze 
+            => Its like once freezed, you cannot make any changes.
+
+var b = {
+    name: {first_name: "Raghu", last_name: "Aand"}, 
+    age: {no_of_years: 33, no_of_months: 11, no_of_days: 27},
+    salary: {gross_income: 1000, net_income: 600},
+    address: {country: "India", state: "Karnataka", city:"Bangalore", area:"KBS", pincode:"000000", landmark: "MG Road" }
+}
+console.log(b)
+Object.freeze(b.name)
+b.name.last_name = "Anand"
+console.log(b)
+console.log(Object.keys(b))
+console.log(Object.values(b))
+console.log(Object.entries(b))  
+
+        e. You can define a function(Custom Based) as a value inside the object.
+
+        var b = {
+    name: {first_name: "Raghu", last_name: "Aand"}, 
+    age: {no_of_years: 33, no_of_months: 11, no_of_days: 27},
+    salary: {gross_income: 1000, net_income: 600},
+    address: {country: "India", state: "Karnataka", city:"Bangalore", landmark: "MG Road" },
+    add: function(){
+        console.log("Hello")
+    }
+}
+
+b.add()
+
+        What is JS Sets ?
+        => Collection of Unique Values/Items.
+        => It is used widely to remove duplicate Items/Values.
+        => The set is denoted by {} braces. Each item is separated by , symbol.
+
+        How to declare a Set.
+            The Approach we use is the constructor approaches
+
+            var a = new Set([1,2,3,4,1,2])
+            console.log(a)
+            // Set(4) { 1, 2, 3, 4 }
+
+            or
+
+            var a = [1,2,3,4,1,2]
+            var b = new Set(a)
+            console.log(b)
+            // Set(4) { 1, 2, 3, 4 }
+
+        In built Methods that can be implemented for Sets.
+
+        var a = new Set([1,2,3,4,1,2])
+console.log(a)
+ 
+var x = [1,2,3,4,1,2]
+var y = new Set(x)
+console.log(y)
+
+var m = new Set()
+m.add(1)
+m.add(2)
+m.add(2)
+m.add(1)
+m.add(3)
+console.log(m)
+console.log(m.has(3))   //true
+console.log(m.has(4))   //false
+console.log(m.size) // Count the Number of Items
+console.log(m.delete(1))  // Since 1 is present it will be deleted and a true message will be printed.
+console.log(m)
+console.log(m.delete(4))// Since 4 is not present false message will be printed.
+m.clear()
+console.log(m)
+
+        What is JS Maps ?
+        => Map is similar to Object 
+
+        How to declare a Map.
+        The Approach we use is the constructor approaches
+
+            var a = new Map()
+
+        In built Methods that can be implemented for maps.
+
+var a = new Map()
+a.set('name','raghu')
+a.set('age',34)
+console.log(a)
+a.set('age', 43)
+console.log(a)
+console.log(a.keys())
+console.log(a.size)
+console.log(a.has('name'))      // Key not values
+console.log(a.has('salary'))  
+a.delete('name')
+console.log(a)
+a.clear()
+console.log(a)
+
+var x = new Map([['name', 'raghu'], ['age', 34]]);
+console.log(x);
+
+        What is JSON ?
+        => Similar as JavaScript Object (95%)
+        => Hardly 1 or 2 diffrences are there.
+            a. The key is also enclosed with quotes.
+
+            var a = {
+    "name": {"first_name": "Raghu", "last_name": "Aand"}, 
+    "age": {"no_of_years": 33, "no_of_months": 11, "no_of_days": 27},
+    "salary": {"gross_income": 1000, "net_income": 600},
+    "languages": ["Tamil", "Telugu", "Kannada"]
+}
+
+        Why we need them ?
+        => For communicating b/w the front end and back end, a data format was introduced.
+        => data format is used to exchange the data b/w 2 end points.
+            eg: html, xml, json, yaml, yang, raml, etc.....
+
+        2 Inbuild methods that are available to handle JSON date in JS.
+        => stringify
+        => parse 
+
+        var a = {
+    name: {first_name: "Raghu", last_name: "Aand"}, 
+    age: {no_of_years: 33, no_of_months: 11, no_of_days: 27},
+    salary: {gross_income: 1000, net_income: 600},
+    languages: ["Tamil", "Telugu", "Kannada"]
+}
+console.log(a)
+var b = JSON.stringify(a)
+console.log(b)   // JS Object into JSON
+
+console.log(JSON.parse(b))  // JSON into JS Object

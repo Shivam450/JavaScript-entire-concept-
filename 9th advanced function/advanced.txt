@@ -1,0 +1,210 @@
+19/02/2024
+
+Lesson - Functions in JavaScript - Advanced
+    Different Types of Functions in JS.
+        Function Declaration
+        => Literal Approach / Normal Function / General Syntax of a Function.
+
+        function add(a,b,c)
+        {
+            return a+b+c
+        }
+        var x = add(3,4,5)
+        console.log(x)
+
+        Function Expression
+        => When you assign a function to a variable.
+
+        var add = function(a,b,c) {
+            return a+b+c
+        }
+
+        var x = add(5,7,9)
+        console.log(x)
+
+        Arrow Function
+        => ES5(2009)/ES6(2015) Concept.
+        => It is a shorthand property to declare a function.
+
+        Normal Function Made Up of.
+            Function Keyword, Function Name, Parameters enclosed with (), a scope represented by {},
+            statements with or without return keyword.
+
+        function add(a)
+        {
+            console.log(1+a)
+        }
+        add()
+
+        Pre defined conditions:
+        a. you dont need to use the function keyword anymore during function expression.
+        b. you dont need to use () if and only if you have a single parameter.
+        c. you dont need to use {} if and only if you have a single statement.
+        d. you dont need to use return keyword if and only if you have a single statement in the 
+            function which is using the return keyword.
+        e. The parameter and the scope of statements/Single Statement will be separated by => Symbol.
+        f. In latest versions, the variable keywords such as var, let & const is also not required 
+            to be used.
+
+        var add = function(a)
+        {
+            console.log(1+a)
+        }
+        add()
+
+        add = a => console.log(1+a)
+        add()
+
+        //Examples 
+        var add = function(a,b,c) {
+    return a+b+c
+}
+
+var x = add(5,7,9)
+console.log(x)
+
+add1 = (a,b,c) => a+b+c
+var y = add1(5,7,9)
+console.log(y)
+
+var a = function(){
+    console.log("Hello")
+}
+a()
+
+a = () => console.log("Hello")
+a()
+
+var b = function(m){
+    return m
+}
+console.log(b(5))
+
+b = m => m
+console.log(b(10))
+
+var z = function(){
+    console.log("I love India")
+    return "India"
+}
+console.log(z())
+
+z = () => {
+    console.log("I love India")
+    return "India"
+}
+
+        Anonymous Function 
+        => A function without any name.
+        => It is used in Callback Functions.
+            => A callback function is nothing but when you pass a function as a argument to a function.
+
+        // Function Expression
+var add = function(a,b){return a+b}
+add(3,5)
+
+var add = (function(a,b){return a+b})(3,5)   //add is a normal variable and not a function name.
+console.log(add)
+
+// var y = function(){
+    // return "World"
+// }
+
+// function add1(a){
+//     console.log("India " + a)
+// }
+// add1(y)
+
+        Generator Function
+        => These are functions which has the power to stop and start the flow of execution by using
+        the yield keyword. 
+        => We need them for performing asynchronous requests.
+        => Generator Functions are denoted by a * symbol just after the function keyword.
+
+        // It's behaviour is similar to a class
+function* add(){
+    yield "Hello"  
+    yield "India"
+    yield 10
+    yield true
+    yield ''
+}
+//We have to create a instance of the generator function
+//These instance will act as a array and then we can iterate each and every statement one by one.
+
+var a = add()   //a is the instance of add generator function.
+
+for(let x of a){
+    console.log(x)
+}
+
+        IIFE - Immediately Invoked Function Expression
+        (function (){
+    console.log("Hello")
+}) ()
+
+        Recursion Function
+        => The Function will call itself again and again until it achieves the end result.
+
+        //5! = 5*4*3*2*1
+
+// function myfact(m){
+//     if(m == 0) return 1
+//     return m*myfact(m-1)       // 5*myfact(4)  // 5*4*myfact(3) // 5*4*3*myfact(2) // 5*4*3*2*myfact(1)
+//                         // 5*4*3*2*1*myfact(0)  // 5*4*3*2*1*1 = 120
+// }
+
+// myfact(5)
+
+//ar^(n-1)  a = 5, r = 2, => upto 3 digits i.e. n = 3 
+// 20*10*5  = 1000 
+
+function mygeo(n){
+    if(n == 0 ) return 1
+    var a = (5*2**(n-1))
+    console.log(a)
+    return a*mygeo(n-1)  // 5*2^2  * 5*2^1 * 5*1
+}
+var x = mygeo(3)
+console.log(x)
+
+    Call Stack
+    => It is a queue like data Structure.
+    => It stores the flow in which the function executes.
+    => This stack will be created at the time of function call.
+    => lifo Principal is used in Call Stack
+    Note: FIFO, LIFO, FILO
+
+
+    function abc(){
+    console.log("I love india")
+    var a = 5
+    var b = 5
+    console.log(a+b)
+    console.log("I am on Planet Earth")
+}
+
+abc()
+
+// 9    1   (2)   3   4   (5)   (6)     7   9
+
+    Hoisting in JS 
+        Variable Hoisting
+        Function Hoisting
+        Function Expression Hoisting
+
+    console.log(a)
+var a = 5
+console.log(a)
+
+
+abc()
+function abc(){
+    console.log("India")
+}
+
+
+a()
+var a = function(){
+    console.log("India")
+}

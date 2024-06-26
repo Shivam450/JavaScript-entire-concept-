@@ -1,0 +1,232 @@
+24/01/2024
+Lesson 2 - Introduction to JavaScript
+    What is JS 
+	=> It is a programming language which confronts to ECMA Standards.
+	=> This language was created to implement dynamic content on the static Document in the Web
+
+    Why JS
+	=> Huge Community Support
+	=> It follows the ECMA Standard.
+	=> Boosts a wide range of templates/libraries.
+	=> Acts as a Common language to build both Front End and Back End.
+	=> Object Oriented in Nature and Hence could be used to find solutions for real world problems.
+
+    Client Server Architecture
+
+        a       ==>       request        ==>         b 
+     Client                                         Server
+        a       <==       response       <==         b
+
+	
+Steps involved in the Client Server Architecture:
+The Client / Browser makes a request to the server
+The Server receives the request and process them.
+Upon processing the request, the server generates some kind of output / Solution.
+These Output / Solution is provided back to the Client as a Response.
+
+    Client Side Rendering / Single Page Application
+    => BROWSER
+    => Bandwidth Usage will be less 
+    => Response will be faster
+    => The page will not get reloaded But only for the first time the page will be loaded and you can 
+    see the loading icon.
+	Eg: React.js, Angular, Vue.js, etc..
+
+    Server Side Rendering / Multi Page Application
+    => SERVER
+    => Bandwidth Usgae will be high
+    => Response will be slower
+    => Every time a request is made, the page will reload.
+	Eg: Node.js, etc..
+
+        Assumption :- 
+        S/w => 1 GB Space for Execution per Person 
+        Server => 4 GB Capacity => 4 Users 
+            If 5th User steps in the server will slow down and every things looks slow.
+            If 6th User comes, server will slow down even further.
+            If 7th User comes, Server will Crash !!!
+
+        Before 20 years => H/W CAPACITY WAS VERY LESS => 1 Gb / Ram.
+
+	A system has 2 slots which can be used to accommodate RAM. This means we can use 2 RAM of capacity 1 GB on a system which could provide services to only 2 users.
+	Suppose we have to cater to 20 users then we may require 10 systems which will increase the cost of the hardware and also increases the managing cost.
+	
+	This was the problem that companies such as Google, Facebook, Yahoo, etc.. faced during 2000’s at the time of Internet explosion. These companies were spending a lot of there money on hardwares.
+	They wanted to put a stop on hardware expenses i.e. wanted to reduce the expense on hardware and were working on a solution for the same.
+
+	This working led them to think of shifting all the heavy load from Server to Client. This though in Facebook helped them to create React.js and in Google it was Angular and so on.
+
+Hence React.js, Angular, etc.. were created which could utilise the Browser to process the request and not the server i.e. Client Side Rendering.        
+    
+Terminologies that you will encounter while dealing with JS
+        Ajax
+	=> Its a Javascript Library,
+	=> It is used to implement asynchronous request to the server.
+	=> The page does not gets reloaded / refreshed. The request goes in a asynchronous manner.
+	Eg: Sending Contact details in the web, while clicking the submit button the page does not gets refreshed but still the data which was entered by the user gets sent to the server (async behaviour)
+
+        Jquery
+	=> It is a JavaScript Library.
+	=> It Stands for JavaScript Query.
+	=> It is used to implement dynamic changes to the HTML or CSS data on the Go.
+	Eg: While selecting a Button, the Button’s color changes or it becomes bigger in size, etc..
+
+        Plugins
+	=> Its a Add On which is readily available that can be embedded in a Project.
+	=> Once embedded, the features provided by the plugin could be used directly.
+	Eg: Installation of Flash Player to watch videos on the web.
+
+        Browsers
+        Frameworks
+
+    JavaScript Engine
+Chrome Browser = Google                 = V8 Engine
+Internet Explorer / Edge = Microsoft    = chakra
+Safari Browser = Apple                  = JS Core
+FireFox Browser = Open Source COmmunicaty = Spider Monkey
+
+    Commonly Used Methods available in JS
+        => Dialog Box which will be visible on the Browser
+        Prompt 
+            It asks you for some input data
+        alert
+            It displays some data
+        confirm
+            It is ask you to confirm on some data
+
+    <html>
+        <head></head>
+        <body>
+            <script>
+                //Hello Hru
+                console.log("Hello Hru")
+                alert("Your name is Missing")
+                prompt("Enter your Name")
+                confirm("If you have entered the correct name, Click Yes")
+            </script>
+        </body>
+    </html>
+
+    
+    JS Variables    
+        var keyword
+            => global scope
+            => The data type of the variable can be changed and the value present inside can also change.
+        let keyword 
+            => local scope 
+            => The data type of the variable can be changed and the value present inside can also change.
+        const keyword
+            => Both global scope or local scope 
+            => It is used to store values which are not changeable & datat type can also not be changed.
+    
+    //Hey I am Fine
+console.log("Hello Hru")
+
+var a = 100
+console.log(a)
+
+a = 110
+console.log(a)
+
+a = "India"
+console.log(a)
+
+let b = 200
+console.log(b)
+
+b = 210
+console.log(b)
+
+b = "Nepal"
+console.log(b)
+
+const c = 300
+console.log(c)
+
+var a = 100
+function abc()
+    {
+    let a = 200
+    console.log(a)  //200
+    }
+abc()
+console.log(a)  //100
+
+    JS DataTypes
+        Primitive Type 
+            Numbers
+            Strings
+            Boolean
+            Null
+            Undefined
+
+    var a = 100 //Number
+console.log(typeof(a))
+
+var b = "India" //String
+console.log(typeof(b))
+
+var c = true //Boolean
+console.log(typeof(c))
+
+var d //undefined
+console.log(typeof(d))
+
+var e = "" //String
+console.log(typeof(e))
+
+var f = " " //String
+console.log(typeof(f))
+
+var g = '' //String
+console.log(typeof(g))
+
+var h = ' ' //String
+console.log(typeof(h))
+
+var i = "a" //String
+console.log(typeof(i))
+
+var j = "null" //String
+console.log(typeof(j))
+
+var k = null //Object
+console.log(typeof(k))
+
+        Non Primitive Type 
+            Arrays
+            Objects
+            Functions
+    
+    Type Conversion in JS
+
+var a = 5
+console.log(typeof a)
+
+var aa = String(a)  // Number to String
+console.log(typeof aa)  //String
+
+var b = "5"
+console.log(typeof b)
+
+var c = Number(b)   // String to Number
+console.log(typeof c)   // Number
+
+var x = 0
+console.log(typeof(x))  //Number
+
+var y = Boolean(x)  //Number into Boolean
+console.log(typeof y)   // Boolean
+console.log(y)  // false
+
+var m = "India"
+var n = Boolean(m)
+console.log(n)
+
+var mm = "0"
+var nn = Boolean(mm)
+console.log(nn)
+
+var mmm = ''    // ""     null    undefined     ''
+var nnn = Boolean(mmm)
+console.log(nnn)

@@ -1,0 +1,436 @@
+6th Feb 2024
+Lesson - JavaScript Arrays and Strings
+
+    What is a Array
+    => Collection of similar items
+    => Number, Strings, Boolean, Objects, Arrays etc...
+    => Arrays are represented using [] braces.
+    => Each item inside it is separated by , symbol.
+    => The items will be stored in a continuous memory location.
+
+    Different Types of Arrays
+        Array of Type Numbers
+        Array of Type String 
+        Array of type Boolean
+        Array of Type Objects
+        Array of Type Arrays / Multidimensional Arrays 
+
+    var a = [1,2,3,4,5] // Arrays of Numbers
+
+    var b = ['a','b','c','d','e']   // Array of Strings
+
+    var c = [true,false,true,true,false]    // Array of Boolean.
+
+    var d = [
+                {name: "Raghu", age: 34, salary: 300}, 
+                {name: "Gurpreet", age: 24, salary: 500}, 
+                {name: "Deepesh", age: 23, salary: 800}
+            ]  // Array of Objects.
+
+    var e = [
+                [1,2,3,4,5],
+                [7,8,10,9,11],
+                [11,23,13,42,15]
+            ]  // Array of Arrays
+
+    Terminologies Involved with Arrays
+    => position of the item in an array Starts from 1.
+    
+    => index
+        a. left to right direction , the index starts from 0,1,2,.....
+        b. right to left direction, the index starts from -1,-2,-3,......
+
+        var a = [1, 2,  3,  4,  5]
+                 0  1   2   3   4
+                -5  -4  -3   -2  -1
+
+        In JS, with the help of index number you can access the item.
+        a[2] will give me the 3rd item.
+        a[-3] will give you the 3rd item.
+    
+    => size
+        The memory allocated in bytes to store the given data.
+        var a = [1, 2,  3,  4,  5]
+        Assumption :- If your OS allocated 2 bytes to store a number then the given array's size is 
+        how many bytes ??  => 10 Bytes 
+
+    => length 
+        The number of items available in the array 
+        length = index + 1
+        var a = [1, 2,  3,  4,  5]
+        Length of a is 5.
+
+        var a = [1,2,3,4,5] // Arrays of Numbers
+console.log(a)
+for(let x of a)
+{
+    console.log(x)
+}
+
+
+
+var b = ['a','b','c','d','e']   // Array of Strings
+console.log(b)
+for(let x of b)
+{
+    console.log(x)
+}
+
+var c = [true,false,true,true,false]    // Array of Boolean.
+console.log(c)
+for(let x of c)
+{
+    console.log(x)
+}
+
+var d = [
+            {name: "Raghu", age: 34, salary: 300}, 
+            {name: "Gurpreet", age: 24, salary: 500}, 
+            {name: "Deepesh", age: 23, salary: 800}
+        ]  // Array of Objects.
+console.log(d)
+for(let x of d)
+{
+    console.log(x.name) // console.log(x['name'])
+    // x is the object which is a individual item within the given array
+    console.log(x.age)
+    console.log(x.salary)
+}
+
+var e = [
+            [1,2,3,4,5],    // 0th Index
+            [7,8,10,9,11],  // 1st Index
+            [11,23,13,42,15]    // 2nd Index
+        ]  // Array of Arrays
+console.log(e)
+console.log(e[0][3])
+for(let x of e)
+{
+    console.log(x[3])
+}
+
+   
+    How to Create Arrays
+        a. General Way of Declearing / Array Literal Approach.
+
+            var a = [1,2,3]
+
+        b. Using predefined Array Class / Array Constructor Approach.
+
+            Class
+            => It is a template in which you can define your real world object.
+            => We define using 2 factors, namely
+                1. Properties.
+                2. Methods.
+
+            class Bottle{
+                constructor(a,b,c){
+                    this.size = a
+                    this.capacity = b
+                    this.color = c
+                }
+                fill()
+                {
+
+                }
+                unfill()
+                {
+
+                }
+                opening()
+                {
+
+                }
+            }
+
+            var a = new Bottle(size,capacity,color)    // You are creating a Object for the class.
+
+            var c = new Bottle()    // you are creating a different Object for the class.
+
+    => predefined class called "Array"
+
+        var a = new Array() // Dynamic Array.
+        var a = new Array(3) // Static Array with length 3 
+
+    In build Methods of Arrays
+        1. a.length => length of the array.
+        2. push => Add the item in the array. The item gets added at the end of the array.(Right Side)
+        3. unshift => Add the item in the array. The item gets added at the begin of the array.(Left Side)
+        4. pop => Delete the item in the array. The item gets deleted at the end of the array.(Right Side)
+        5. shift => Del the item in the array. The item gets deleted at the begin of the array.(Left Side)
+        6. indexof()
+            => It accepts a character and it will return the index number of that character which it
+            encounters first.
+        7. lastindexof()
+             => It accepts a character and it will return the index number of that character which it
+            encounters last.
+        8. reverse 
+            => It will simply reverse the items in an array.
+        9. includes
+            => It will check whether the given item/value is present in the array or not.
+            If present it will return true if not then it will return false
+        
+        map, reduce, filter, forEach [ES5, ES6 Lesson]
+
+        10. slice 
+            => It will cut the array into 2 parts based on the value provided.
+            => It accepts 2 parameters:
+                1. starting index number 
+                2. length of the new array
+                => It cuts the array into 2.
+        
+        11. SPlice
+            => It has the power to add a item or to delete a item or to cut the array into 2 parts.
+            => 4 parameters.
+                index, position, item add, number of items you want to delete.
+        12. etc........ 
+
+        var f = new Array()
+console.log(f)
+f.push(1)
+f.push(2)
+f.push(3)
+console.log(f)
+f.unshift(0)
+console.log(f)
+// f.pop()
+// console.log(f)  
+// f.shift()
+// console.log(f)  
+f.push(2)
+f.push(4)
+f.push(2)
+console.log(f)
+console.log(f.indexOf(2))
+console.log(f.lastIndexOf(2))
+console.log(f)
+console.log(f.reverse())
+console.log(f.includes(10))
+console.log(f.includes(4))
+console.log(f)
+
+console.log(f.slice(0,3))    //  [2,4,2]
+
+
+    What is a String
+    => Collection of Characters
+
+    var a = "India" //double quote
+    var b = 'India' //quote
+    var c = `India` //back quote
+
+    Terminologies Involved with String
+    => position of the item in an strings Starts from 1.
+    
+    => index
+        a. left to right direction , the index starts from 0,1,2,.....
+        b. right to left direction, the index starts from -1,-2,-3,......
+
+        var a =" I  n   d   i   a "
+                 0  1   2   3   4
+                -5  -4  -3   -2  -1
+
+        In JS, with the help of index number you can access the item.
+        a[2] will give me the 3rd item i.e. d
+        a[-3] will give you the 3rd item i.e. d
+    
+    => size
+        The memory allocated in bytes to store the given data.
+        var a = "India"
+        Assumption :- If your OS allocated 1 bytes to store a character then the given String's size is 
+        how many bytes ??  => 5 Bytes 
+
+    => length 
+        The number of items available in the array 
+        length = index + 1
+        var a = "India"
+        Length of a is 5.
+
+    How to Create a String
+        a. General Way of Declearing / String Literal Approach.
+                var a = "India" //double quote
+                var b = 'India' //quote
+                var c = `India` //back quote
+
+        b. Using predefined String Class / String Constructor Approach.
+            => The String Class expects the string itself.
+                var d = new String(5)       // 5 is a string
+                var e = new String()        // '' is a string
+
+    var a = "India" //double quote
+console.log(a)
+console.log(a[1])   //n
+var b = 'India' //quote
+console.log(b)
+var c = `India` //back quote
+console.log(c)
+
+var d = ''
+console.log(d)
+var e = ' '
+console.log(e)
+var f = 'a'
+console.log(f)
+
+    String Properties
+    1. Strings are Immutable.
+            you cannot replace an existing character. 
+    2. Strings are case sensitve.
+            var a = "India"
+            var b = "india"
+            a == b // False 
+    3. length
+        var a = 'India'
+        a.length    //5
+    4. Multi Line Strings
+        var a = "I am from India"
+
+        Appraoch 1 => Using \   (Back Slash)            / (Forward Slash)   |   
+        var a = "I\
+        am\
+        from\
+        India"
+
+        Appraoch 2 => Using +
+        var a = "I" +
+        "am" +
+        "from" +
+        "India"
+
+    In build Methods of Strings
+    1. length 
+        var d = new String(5)
+console.log(d)
+var e = new String("India")
+console.log(e)
+console.log(e.length)
+    
+    2. ACCESS THE item/character
+        a. Approach 1 - Using the index number 
+                var a = "India"
+                console.log(a[1])
+        b. Approach 2 - Using the method charAt()
+                var b = "Asia"
+                console.log(b.charAt(3))
+
+    3. convert the given string into uppercase
+    4. convert the given string into lowwercase
+
+        var c = "abcdefghi"
+        console.log(c.toUpperCase())
+
+        var d = "ABCDEFGHI"
+        console.log(d.toLowerCase())
+
+    5. slice -> Cut the given string in to 2 sub strings
+        2 parameters
+        1. Index Number
+        2. Position Number
+
+    6. Split => It spilts the given string into a array.
+        var f = "Hey I am Raghu"
+console.log(f.split())  // Single Item = Entire string
+
+var g = "Hey I am Raghu"
+console.log(f.split(""))    // Items count is based on length of the given string
+
+var g = "Hey I am Raghu"
+console.log(f.split(" ")) // Based on the number of spaces, you will get spaces + 1 items as the result.
+
+    7. replace 
+        2 parameters
+        a. the value to be replaced with 
+        b. the value that you want to replace .
+
+            var i = "Hey I am Raghu"
+            console.log(f.replace("Raghu","Rahul"))
+
+    8. concat method - similar to + Operator 
+        var j = "Delhi"
+        var k = "India's Capital is "
+        console.log(k.concat(j))
+
+    9. trim()
+    server is sending "Hello You are fine !!"
+    But due to headers and due to travelling through the network, additional spaces will be embedded to the
+    string at the beginning or at the end or both sides.
+
+    you will receive "   Hello You are fine !!   "
+
+    var l = "   Hello You are fine !!   "
+console.log(l)
+console.log(l.trim())
+
+Escape Characters
+    \n =>  New Line 
+    \t => tab space 
+    var a = 'Hello How\'s your home ?'
+    \"
+
+
+    var a = "India"
+console.log(a[1])
+
+var b = "Asia"
+console.log(b.charAt(3))
+
+var c = "abcdefghi"
+console.log(c.toUpperCase())
+
+var d = "ABCDEFGHI"
+console.log(d.toLowerCase())
+
+var e = "Hey I am Raghu"
+console.log(e.slice(9,14))  // you will get 10th to 14th index characters as the result.
+
+
+var f = "Hey I am Raghu"
+console.log(f.split())  // Single Item = Entire string
+
+var g = "Hey I am Raghu"
+console.log(f.split(""))    // Items count is based on length of the given string
+
+var h = "Hey I am Raghu"
+console.log(f.split(" ")) // Based on the number of spaces, you will get spaces + 1 items as the result.
+
+var i = "Hey I am Raghu"
+console.log(f.replace("Raghu","Rahul"))
+
+var j = "Delhi"
+var k = "India's Capital is "
+console.log(k.concat(j))
+
+var l = "   Hello You are fine !!   "
+console.log(l)
+console.log(l.trim())
+
+var a = 'Hello How\'s your home ?'
+
+var f = new Array()
+console.log(f)
+f.push([1,2,3])
+f.push([4,5,6])
+f.push([7,8,9])
+console.log(f)
+f.unshift([-2,-1,0])
+console.log(f)
+f.pop()
+console.log(f)  
+f.shift()
+console.log(f)  
+f.push([7,8,9])
+console.log(f)
+console.log(f[0].indexOf(1))
+console.log(f[2].indexOf(9))
+console.log(f[0].lastIndexOf(2))
+console.log(f.reverse())
+for(let x of f)
+{
+    //x is the item of f which is again an array
+    x.reverse()
+}
+console.log(f[1].includes(10))
+console.log(f[2].includes(4))
+console.log(f)
+
+console.log(f[1].slice(0,1))

@@ -1,0 +1,184 @@
+25th Jan 2024
+Session 4 , Lesson 3 = JS Operators
+    What JS Operators
+        => It is a special symbol which performs some action or a particular task b/w 2 operands or 1
+        operand.
+            here Operand denotes the data / value or the variables.
+
+    Types of Operators
+        Arthimetic Operator
+            +   -   /   *   **  %   ++  --
+            => Post(after) and pre(before)
+
+        var a = 5
+            var b = 10
+
+            console.log(a+b)    //Addition
+            console.log(a-b)    //Substraction
+            console.log(a*b)    //Multiplication
+            console.log(a/b)    //Division
+            console.log(2**2)    //Exponent   
+            console.log(5%3)    //Modulus (Reminder Value)
+            console.log(a++)    //Increment (the Value gets increased by 1)
+            console.log(a)
+            console.log(b--)    //Decrement (the Value gets decreased by 1)
+            console.log(b)
+            // a = 6 and b = 9
+            console.log(++a)    //Increment (the Value gets increased by 1)
+            console.log(a)
+            console.log(--b)    //Decrement (the Value gets decreased by 1)
+            console.log(b)
+
+        Assignment Operators
+            =       +=      -=      /=      *=      **=     %=      &=      |=      ^=  
+
+//=       +=      -=      /=      *=      **=     %=      &=      |=      ^=  
+
+var a = 10  // Assigning a value to a variable
+console.log(a)
+a+=5    //  a+=5    a = a + 5       a = 10 + 5      a = 15
+console.log(a)
+a-=6    // a-=6     a = a - 6       a = 15 - 6      a = 9
+console.log(a)
+a/=3    // a/=3     a = a / 3       a = 9 / 3       a = 3
+console.log(a)
+a*=2    // a*=2     a = a * 2       a = 3 * 2       a = 6
+console.log(a)
+a**=2   //  a**=2   a = a ** 2      a = 6 ** 2      a = 36
+console.log(a)
+a%=8    // a%=8     a = a % 8       a = 36 % 8      a = 4
+console.log(a)
+a&=3    // a &=3    a = a & 3       a = 4 & 3       a = 100 & 011   a = 0
+console.log(a)
+a|=3    // a |=3    a = a | 3       a = 0 | 3       a = 000 | 011   a = 011     a = 3
+console.log(a)
+a^=2    // a ^=2    a = a ^ 2       a = 3 ^ 2       a = 011 ^ 010   a = 001     a = 1
+console.log(a)
+
+        
+        Bit Wise Operator 
+            &       |       ^       ~       <<      >>
+
+        a       b       a&b     a|b     a^b
+        0       0        0       0       0
+        0       1        0       1       1
+        1       0        0       1       1
+        1       1        1       1       0
+
+    Decimal Format      Binary Format for a 3 bit Computer System
+        0       =>      000
+        1       =>      001
+        2       =>      010
+        3       =>      011
+        4       =>      100
+        5       =>      101
+        6       =>      110
+        7       =>      111
+
+    2**1    => 2        0,1
+    2**2    => 4        00,01,10,11
+    2**3    => 8
+    .....
+
+    In 32 Bit OS, every data will occupy 32 bits 
+
+        00000000 00000000 00000000 00000001
+
+    In 64 Bit OS, every data will occupy 64 bits
+
+        00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001
+
+        1 digit = bit 
+        4 digit = nibble
+        8 digit = byte
+        1024 digit = Kilo Byte 
+        1024*1024 digit = Mega Byte 
+        etc...
+
+        << => Left shift
+            a. From the Left side the digits are dropped.
+            b. From the right side the digit zeros are added.
+            data / operand / variable << value by which it should be shifted
+
+        >> => Right shift
+            a. From the Right side the digits are dropped.
+            b. From the Left side the digit zeros are added.
+            data / operand / variable << value by which it should be shifted
+
+
+            -4  -3  -2  -1  0   1   2   3   4
+                            1   2   3   4   5
+             4   3   2   1
+
+            => The Positive cycle starts from 0 and goes towards right side
+            => The Negative cycle starts from -1 and goes towards left side
+
+            //  &       |       ^       ~       <<      >>
+
+            var a = 3   // 011
+            var b = 5   // 101
+                        //
+            console.log(3&5)    // 001 => 1
+            console.log(3|5)    // 111 => 7
+            console.log(3^5)    // 110  => 6
+
+            console.log(3<<2)   //011   100 => 4        X your system was 3 bit OS 
+
+            //00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000011       = 3
+            //  000000 00000000 00000000 00000000 00000000 00000000 00000000 00000011
+            //  000000 00000000 00000000 00000000 00000000 00000000 00000000 00000011 00
+            //00000000 00000000 00000000 00000000 00000000 00000000 00000000 00001100       =12
+
+            console.log(a>>1)
+
+            console.log(~-9)
+
+// Next Session 
+         Comparision Operator
+            <       >       <=      >=      ==      !=      ===     !==
+
+            //<       >       <=      >=      ==      !=      ===     !==
+
+console.log(4<7)    //true
+console.log(4>7)    //false
+console.log(4<=7)   //true
+console.log(7<7)    //false
+console.log(7<=7)   //true
+console.log(4>=7)   //false
+console.log(5==5)   //true
+console.log(5=="5") //true  , the values are checked not the datatype
+console.log(5==="5")    //false, both the value & datatype is checked
+console.log(3!=4)   //true
+console.log(4!=="4")    //true  , It will check both the value(4==4) and datatype(number == string)
+        
+        Logical Operator
+            &&      ||      !
+
+            // &&      ||      !
+
+console.log(4<5 && 6<7)     // 1 && 1   // 1    //true
+
+console.log(4<5 || 6>7)     // true || false    // true
+
+console.log(!(4<5 && 6<7))  // 1 && 1   // 1    //true  // !(true)  //false
+console.log(!(4<5 || 6>7))     // true || false    // true  //!(true)   //false
+
+        String Operator (Concatenation) => Merging of two strings into a single string.
+            +
+
+            var a = "India is a "
+var b = "Country"
+var c = a+b
+console.log(c)
+
+        type of Operator 
+            typeof 
+
+        var a = 10
+console.log(typeof a)
+console.log(typeof(a))
+
+        Spread Operator (ES5 & ES6)
+            ...
+        Ternary Operator (Decision Statements)
+            Conditions ? //Statements : //Statements
